@@ -73,61 +73,30 @@ header .second-board .right_menu a {
     color: black;
     text-decoration: none;
 }
-
-header .all-menu {
-    height: 430px;
-    background-color: #fff;
+/* OVERVIEW LINE */
+ header .overview {
+    display: none;
+    
 }
 
-header .all-menu .menu-container {
-    width: 80%;
-    height: 380px;
-    margin: 0 auto;
-    border: 1px solid green;
+header .overview .menu-items {
+
+}
+
+
+
+header .overview.block {
     display: flex;
-}
-
-header .all-menu .menu-container .menu-items{
-    width: 25%;
-    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 480px;
     background-color: beige;
-    display: flex;
-    flex-direction: column;
 
 }
 
-header .all-menu .menu-container .menu-items h1{
-    font-size: 14px;
-    font-weight: 750;
-    color: black;
-}
 
-header .all-menu .menu-container .menu-items a{
-    margin-bottom: 10px;
-    color: black;
-    text-decoration: none;
-    font-weight: 280;
-}
 
-header .all-menu .menu-container .menu-items:first-child a.red-font{
-    text-decoration: underline;
-    color: red;
-    font-weight: 700;
-}
-
-header .all-menu .menu-container .menu-items:first-child a.blue-font{
-    text-decoration: underline;
-    color: blue;
-    font-weight: 700;
-}
-
-header .all-menu .menu-container .menu-items:nth-child(3){
-    background-color: yellow;
-}
-
-header .all-menu .menu-container .menu-items:nth-child(3) p{
-
-}
 
 
 /* MAIN */
@@ -144,15 +113,16 @@ main section.trendy {
 main section.trendy .first_trend{
     display: flex;
     overflow: hidden;
+    
 }
 
 main section.trendy .first_trend a {
     height: 1075px;
-    
-    
+
 }
 main section.trendy .first_trend a img{
-    width: 770px;
+    width: 850px;
+    
     
 }
 
@@ -182,7 +152,4 @@ main section.trendy nav .red-font{
 main section.trendy nav .blue-font{
     text-decoration: underline;
     color: blue;
-}
-main section.trendy .second_trend{
-
 }
