@@ -26,3 +26,10 @@ window.addEventListener('scroll', function(){
         bannerEl.classList.remove('scroll')
     }
 })
+
+
+
+
+
+
+const allEl = document.querySelector('intultive-btn button:first')

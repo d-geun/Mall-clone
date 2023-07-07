@@ -7,6 +7,80 @@
     /* outline: none; */
     }
 
+    li {
+        list-style: none;
+    }
+
+    #beige {
+        background-color: beige;
+    }
+
+    #orange {
+        background-color: orange;
+    }
+    #black {
+        background-color: black;
+    }
+
+    #blue {
+        background-color: blue;
+    }
+
+    #gray {
+        background-color: gray;
+    }
+
+    #skyblue {
+        background-color: skyblue;
+    }
+
+    #azure {
+        background-color: azure;
+    }
+
+    #darkcyan {
+        background-color: darkcyan;
+    }
+
+    #brown {
+        background-color: brown;
+    }
+
+    #greenyellow{
+        background-color: greenyellow;
+    }
+
+    #palevioletred {
+        background-color: palevioletred;
+    }
+
+    #red {
+        background-color: red
+    }
+    #antiquewhite {
+        background-color: antiquewhite;
+    }
+
+    #purple {
+        background-color: purple;
+    }
+    
+    
+    /* #best-logo {
+        
+    } */
+
+
+    a{
+        text-decoration: none;
+        color: black;
+        
+    }
+
+    h1 {
+        font-size: 12px;
+    }
+
 /* HEADER */
 header {
     width: 100%;
@@ -271,9 +345,106 @@ main .container_items .banner a{
     color: #333;
 }
 
-.intultive .intultive-item {
-    width: 1000px;
-    height: 300px;
-    border: 2px dashed gray;
+/* 이미지 슬라이드 구현할 것 */
+
+.intultive .intultive-items {
+    width: 1000px;    
     margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    overflow: hidden;
+
 }
+
+.intultive .intultive-items .item-list{
+    display: flex;
+    
+}
+.intultive .intultive-items .item-list a {
+    margin-right: 51px;
+}
+.intultive .intultive-items .item-list a img{
+    width: 200px;
+ 
+}
+
+
+.item__contents {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 200px;
+    
+}
+/* NEW ARRIVALS */
+
+    .item__contents .new_arrivals {
+       
+    }
+
+
+    .item__contents .new_arrivals > .arriv_title{ 
+        height: 75px;
+        text-align: center;
+    }
+
+    .item__contents .new_arrivals > .arriv_title h1 {
+        font-size: 24px;
+    } 
+
+    .item__contents .new_arrivals > .arriv_title p {
+        color: gray;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .item__contents .new_arrivals > .arriv-items {
+        
+        margin-bottom: 30px;
+    
+    }
+
+    
+    .item__contents .new_arrivals > .arriv-items img{
+        width: 250px;
+        margin-right: 15px;
+    }
+    
+    .item__contents .new_arrivals > .arriv-items .item-info {
+
+
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+     }
+
+     .item__contents .new_arrivals > .arriv-items .item-info .description {
+        width: 267px;
+        
+     }
+
+     .item__contents .new_arrivals > .arriv-items .item-info .description h2{
+        font-size: 12px;
+        font-weight: 600;
+     }
+     .item__contents .new_arrivals > .arriv-items .item-info .description p{
+        color: gray;
+        font-weight: 500;
+        
+     }
+
+     
+
+     
+
+     .new_arrivals > .arriv-items .item-info .color-border {
+         display: flex;
+         
+        }
+
+        .new_arrivals > .arriv-items .item-info .color-border li {
+            width: 15px;
+            height: 2px;
+            margin-right: 1px;
+        }
+
+    
+        
