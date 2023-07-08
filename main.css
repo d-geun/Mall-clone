@@ -368,83 +368,100 @@ main .container_items .banner a{
  
 }
 
-
+/* ITEM CONTENTS */
 .item__contents {
-    width: 75%;
+    width: 1500px;
     margin: 0 auto;
-    margin-top: 200px;
-    
+    margin-top: 400px;
+ 
 }
-/* NEW ARRIVALS */
-
-    .item__contents .new_arrivals {
-       
-    }
 
 
-    .item__contents .new_arrivals > .arriv_title{ 
+
+/* ITEM CONTENTS COMMON STYLES */
+
+
+    .item__contents .title{ 
         height: 75px;
         text-align: center;
+    
     }
 
-    .item__contents .new_arrivals > .arriv_title h1 {
+    .item__contents .title h1 {
         font-size: 24px;
     } 
 
-    .item__contents .new_arrivals > .arriv_title p {
+    .item__contents .title p {
         color: gray;
         font-weight: 500;
         font-size: 15px;
     }
-    .item__contents .new_arrivals > .arriv-items {
-        
-        margin-bottom: 30px;
-    
-    }
 
     
-    .item__contents .new_arrivals > .arriv-items img{
+    .item__contents img{
         width: 250px;
         margin-right: 15px;
     }
     
-    .item__contents .new_arrivals > .arriv-items .item-info {
-
-
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-     }
-
-     .item__contents .new_arrivals > .arriv-items .item-info .description {
+   
+     .item__contents  .container_item .description {
         width: 267px;
         
      }
 
-     .item__contents .new_arrivals > .arriv-items .item-info .description h2{
+     .item__contents  .container_item .description h2{
         font-size: 12px;
         font-weight: 600;
      }
-     .item__contents .new_arrivals > .arriv-items .item-info .description p{
+     .item__contents  .container_item .description p{
         color: gray;
         font-weight: 500;
         
      }
 
-     
 
-     
-
-     .new_arrivals > .arriv-items .item-info .color-border {
+     .item__contents .container_item .color-border {
          display: flex;
          
         }
 
-        .new_arrivals > .arriv-items .item-info .color-border li {
+    .item__contents .container_item .color-border li {
             width: 15px;
             height: 2px;
             margin-right: 1px;
         }
 
     
+        /* ARRIVALS */
+
+    .item__contents .arrivals .arriv-items {
         
+            margin-bottom: 30px;
+            margin-top: 120px;
+            display: flex;
+            justify-content: center;
+        }
+
+            
+    .item__contents .arrivals .arriv-items img{
+        width: 250px;
+        margin-right: 15px;
+    }
+    
+
+    /* BEST ITEM */
+
+    .item__contents .best-items{
+        margin-top: 300px;
+    }
+    .item__contents .best-items .best-box{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+   
+
+    .item__contents .best-items img{ 
+        width: 350px;
+    }
