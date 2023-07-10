@@ -84,15 +84,16 @@
 /* HEADER */
 header {
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     
 }
 
 header .top-board {
     background-color: rgb(212, 207, 207);
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    
+    
 }
 
 
@@ -116,12 +117,11 @@ header .top-board  a {
 
 
 header .second-board {
-    width: 100%;
     background-color: #fff;
 }
 
 header .second-board .logo-box {
-    height: 150px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,10 +134,13 @@ header .second-board .logo-box.scroll{
     margin: 0 auto;
 }
 
-
-header .second-board a img {
-    width: 330px;
-    height: 60px;
+header .second-board > .logo-box > a {
+    width: 30%;
+}
+header .second-board > .logo-box > a > img {
+    width: 100%;
+    
+    
 }
 
 header .second-board .left_menu > .material-icons {
@@ -148,6 +151,7 @@ header .second-board .right_menu {
     width: 150px;
     display: flex;
     justify-content: space-between;
+
 }
 
 header .second-board .right_menu a {
@@ -179,13 +183,12 @@ header .overview.block {
 
 }
 
-main {
-    width: 100%;
-    padding-top: 160px;
-}
 
+main {
+    
+}
 main .container_items {
-    /* border: 5px solid yellow; */
+    border: 5px solid yellow;
 
 }
 
@@ -196,7 +199,7 @@ main .container_items .popular-items {
 
 
 main .container_items .popular-items > a > img {
-    width: 50vw;
+    
     height: 1070px;
     
 }
@@ -498,11 +501,13 @@ main .container_items .banner a{
     }
 
     .item__contents .best-cody .cody-box .container_item{
-         width: 100%;
+        
+        width: 100%;
     }
 
     .item__contents .best-cody .cody-box img{
     width: 90%;
+        
     }
 
 
@@ -518,7 +523,7 @@ main .container_items .banner a{
         width: 100%;
         border-top: 1px solid gainsboro;
         margin-top: 300px;
-        display: flex;
+
     }
 
     footer .left_foot {
@@ -528,13 +533,12 @@ main .container_items .banner a{
     }
 
     footer .center_foot {
-        width: 25%;
+        width: 25px;
         height: 500px;
         background-color: orange;
     }
 
     footer .right_foot {
-        width: 25%;
         height: 500px;
         background-color: skyblue;
     }
