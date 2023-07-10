@@ -33,3 +33,11 @@ window.addEventListener('scroll', function(){
 
 
 const allEl = document.querySelector('intultive-btn button:first')
+
+
+
+
+//  수정해야할 부분들
+//  banner 부분 스크롤시 화면 최상단으로 올라가지 않음
+//  이미지 슬라이드 구현
+ 
