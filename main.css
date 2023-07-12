@@ -113,22 +113,23 @@ header .second-board .logo-box {
     height: 150px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    
+    align-items: center;  
+
 }
 
 header .second-board .logo-box.scroll{
-    width: 50%;
     height: auto;
     margin: 0 auto;
 }
 
 header .second-board .logo-box.scroll img{
     width: 250px;
+    transition: all 0.3s ease;
 }
     
 header .second-board > .logo-box > a > img {
     width: 500px;
+    transition: all 0.3s ease;
 }
 
 header .second-board .left_menu > .material-icons {
@@ -165,31 +166,68 @@ header .overview.block {
 }
 
 /* MAIN */
-main .container_items .popular-items {
+main{
+    position: absolute;
+    top: 180px;
+    width: 100%;
+}
+
+section{
+    position: relative;
+}
+
+section .prev-btn .material-icons,
+section .next-btn .material-icons{
+    font-size: 100px;
+    color: #fff;
+}
+main section .prev-btn {
+    position: absolute;
+    top: 50%;
+    left: 3%;    
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+section .next-btn{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);    
+    cursor: pointer;
+}
+
+section .container_items .popular-items{
+    width: 233.33vw;
     display: flex;
 }
 
-main .container_items .popular-items > a > img {
-    height: 1070px;
+section .container_items .popular-items .popular-slide {
+    width: 33.33%; 
+}
+section .popular-slide a {
+
+}
+section .popular-slide img{
+    width: 100%;
 }
 
-.banner {
+main .banner {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
 }
 
-.banner.scroll{
+main .banner.scroll{
     position: fixed;
-    top: 83px;
+    top: 80px;
     z-index: 99;
-}
+} 
 
-.banner a{
+main .banner a{
     font-size: 18px;
     font-weight: 700;
     margin-right: 20px;
@@ -199,7 +237,6 @@ main .container_items .popular-items > a > img {
 
 /* CODY */ 
 .cody-wrapper {
-    width: 300vw;
     display: flex;
 }
 
@@ -212,7 +249,7 @@ main .container_items .popular-items > a > img {
 
 .cody-wrapper .cody .cody-slide .prev .material-icons,
 .cody-wrapper .cody .cody-slide .next .material-icons {
-    font-size: 100px;
+    font-size: 75px;
     color: gray;
     cursor: pointer;   
 }
@@ -221,20 +258,21 @@ main .container_items .popular-items > a > img {
     z-index: 99;
 }
 
-.cody-wrapper .cody .cody-slide .next{
-    margin-right: 60px;
+.cody .cody__container {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.8s ease;
+    
 }
 
-.cody .cody__container {
-    display: flex;
-    transition: all 0.8s ease;
-    overflow: hidden;
-}
-.cody .cody__container a {
-    margin-right: 60px;
+.cody .cody__container a:nth-child(2) {
+    margin-right: 30px;
+    margin-left: 30px;
 }
 .cody .cody__container img {
     width: 100%;
+    height: 400px;
 }
 
 /* WEEKLY BEST */
@@ -449,21 +487,3 @@ main .container_items .popular-items > a > img {
 .item__contents .best-cody .cody-box img{
     width: 90%;
 }  
-
-/* FOOTER */
-footer {
-    width: 100%;
-    border-top: 1px solid gainsboro;
-    margin-top: 300px;
-}
-
-footer .text-box {
-    width: 80%;
-    height: 300px;
-    margin: 0 auto;
-    border: 3px solid #333;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-}
-        

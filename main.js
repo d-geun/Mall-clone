@@ -16,7 +16,7 @@ promotionToggleBtn.addEventListener('click', function() {
 const headerEl = document.querySelector('.logo-box')
 const bannerEl = document.querySelector('.banner')
 window.addEventListener('scroll', function(){
-    if(window.scrollY > 700) {
+    if(window.scrollY > 830) {
         headerEl.classList.add('scroll')
         bannerEl.classList.add('scroll')
     }else{
@@ -24,6 +24,38 @@ window.addEventListener('scroll', function(){
         bannerEl.classList.remove('scroll')
     }
 })
+
+
+const imageSlide = document.querySelector('.popular-slide')
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+let currentImage = 0;
+
+function getImageSlide(event) {
+  imageSlide.forEach(slide => {
+    slide.style.transform = `translateX(-${event*33.33}vw)`
+  })
+}
+
+function prevImageSlide() {
+  currentImage--;
+  if (currentImage < 0) {
+    currentImage = imageSlide.length - 1;
+  }
+  getImageSlide(currentImage);
+}
+
+function nextImageSlide() {
+  currentImage++;
+  if (currentImage >= imageSlide.length) {
+    currentImage = 0;
+  }
+  getImageSlide(currentImage);
+}
+
+prevBtn.addEventListener('click', prevImageSlide)
+nextBtn.addEventListener('click', nextImageSlide)
+
 
 
 
@@ -66,7 +98,7 @@ function stopSlideShow() {
 // 이전 버튼 클릭 시 이벤트 핸들러
 document.querySelectorAll('.prev').forEach(button => {
   button.addEventListener('click', () => {
-    stopSlideShow();
+    stopSlideShow()
     prevSlide();
     startSlideShow();
   });
@@ -84,3 +116,9 @@ document.querySelectorAll('.next').forEach(button => {
 // 초기 슬라이드 표시 및 자동 슬라이드 시작
 showSlide(currentSlideIndex);
 startSlideShow();
+
+// * append()메소드를 활용해서 부드러운 이미지 슬라이드로 만들기
+
+
+
+
