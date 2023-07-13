@@ -5,11 +5,12 @@ body{
 
 a{
     text-decoration: none;
+    color: #333;
 }
 .login-container{
-    width: 20%;
-    height: 2000px;
-    border: 1px solid green;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -31,30 +32,140 @@ a{
 }
 
 .login {
-    background-color: red;
     margin-top: 70px;
 }
 
 .login h1{
-    font-size: 30px;
+    display: inline-block;
+    font-size: 25px;
 }
 
 .login p {
     line-height: 0.3;
+    
 }
 
 .login-btn {
     width:100%;
     height: 70px;
-    background-color: yellow;
+    background-color: #FEE500;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .login > img {
     width: 100%;
 }
 
+.login-contents {
+    border-top: 1px solid #f5f5f5;
+    position: relative;
+}
+    
 
+.login-contents::before {
+    width: 40px;
+    content: '또는';
+    text-align: center;
+    color: #b2b2b2;
+    font-size: 5px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tab-menu {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.tab-menu .member,
+.tab-menu .non-member {
+    width: 50%;  
+    padding-top: 20px;
+    padding-bottom: 20px;  
+}
+
+.tab-menu .member {
+    color: #222222;
+    opacity: 0.8;
+    border: 1px solid #333;
+    border-radius: 5px 0 0 5px;
+}
+
+.tab-menu .non-member {
+    color: #888888;
+    background-color: #FAFAFA;
+    border-radius: 0 5px 5px 0;
+}
+
+.login-contents input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid gainsboro;
+    font-size: 18px;
+    outline: none;
+}
+
+.login-contents input::placeholder {    
+    color: gray;
+}
+.check-btn {
+    display: flex;
+    align-items: center;
+}
+input.checkbox{
+    width: 16px;
+    height: 16px;
+}
+
+.check-btn p {
+    font-size: 14px;
+}
+
+.already{
+    margin-top: px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.personal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal .search {
+    display: flex;    
+}
+
+.personal p {
+    cursor: pointer;
+    color: black;
+}
+.personal .search p {
+    margin-right: 25px;
+}
+
+/* .login-contents::after{
+    content: '또는';
+    color
+    position: absolute;
+} */
