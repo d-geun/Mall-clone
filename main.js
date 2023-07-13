@@ -16,7 +16,7 @@ promotionToggleBtn.addEventListener('click', function() {
 const headerEl = document.querySelector('.logo-box')
 const bannerEl = document.querySelector('.banner')
 window.addEventListener('scroll', function(){
-    if(window.scrollY > 700) {
+    if(window.scrollY > 1200) {
         headerEl.classList.add('scroll')
         bannerEl.classList.add('scroll')
     }else{
@@ -84,3 +84,8 @@ document.querySelectorAll('.next').forEach(button => {
 // 초기 슬라이드 표시 및 자동 슬라이드 시작
 showSlide(currentSlideIndex);
 startSlideShow();
+
+
+window.addEventListener('scroll', function(){
+  console.log(this.window.scrollY)
+})

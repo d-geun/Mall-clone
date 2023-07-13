@@ -11,58 +11,58 @@ li {
     list-style: none;
 }
 
-#beige {
+.beige {
     background-color: beige;
 }
 
-#orange {
+.orange {
     background-color: orange;
 }
-#black {
+.black {
     background-color: black;
 }
 
-#blue {
+.blue {
     background-color: blue;
 }
 
-#gray {
+.gray {
     background-color: gray;
 }
 
-#skyblue {
+.skyblue {
     background-color: skyblue;
 }
 
-#azure {
+.azure {
     background-color: azure;
 }
 
-#darkcyan {
+.darkcyan {
     background-color: darkcyan;
 }
 
-#brown {
+.brown {
     background-color: brown;
 }
 
-#greenyellow{
+.greenyellow{
     background-color: greenyellow;
 }
 
-#palevioletred {
+.palevioletred {
     background-color: palevioletred;
 }
 
-#red {
+.red {
     background-color: red
 }
 
-#antiquewhite {
+.antiquewhite {
     background-color: antiquewhite;
 }
 
-#purple {
+.purple {
     background-color: purple;
 }
 
@@ -118,13 +118,13 @@ header .second-board .logo-box {
 }
 
 header .second-board .logo-box.scroll{
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
 }
 
 header .second-board .logo-box.scroll img{
     width: 250px;
+    transition: all 0.2s ease-in;
 }
     
 header .second-board > .logo-box > a > img {
@@ -165,14 +165,31 @@ header .overview.block {
 }
 
 /* MAIN */
-main .container_items .popular-items {
+
+main {
+    width: 100%;
+    position: absolute;
+    top: 185px;
+    /* overflow: hidden; */
+}
+
+/* SECTION */
+section{
+    width: 300vw;
     display: flex;
 }
 
-main .container_items .popular-items > a > img {
-    height: 1070px;
+section .slide-wrapper{
+    width: 100vw;
+    display: flex;
 }
 
+section .slide-wrapper img {
+    width: 33.33vw;
+}
+
+
+/* BANNER */
 .banner {
     width: 100%;
     padding-top: 20px;
@@ -186,7 +203,7 @@ main .container_items .popular-items > a > img {
 .banner.scroll{
     position: fixed;
     top: 83px;
-    z-index: 99;
+    z-index: 10;
 }
 
 .banner a{
@@ -218,7 +235,7 @@ main .container_items .popular-items > a > img {
 }
 .cody-wrapper .cody .cody-slide .prev,
 .cody-wrapper .cody .cody-slide .next{
-    z-index: 99;
+    z-index: 9;
 }
 
 .cody-wrapper .cody .cody-slide .next{
@@ -450,20 +467,3 @@ main .container_items .popular-items > a > img {
     width: 90%;
 }  
 
-/* FOOTER */
-footer {
-    width: 100%;
-    border-top: 1px solid gainsboro;
-    margin-top: 300px;
-}
-
-footer .text-box {
-    width: 80%;
-    height: 300px;
-    margin: 0 auto;
-    border: 3px solid #333;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-}
-        
