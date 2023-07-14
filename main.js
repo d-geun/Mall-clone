@@ -27,7 +27,7 @@ window.addEventListener('scroll', function(){
 
 
 
-const slides = document.querySelectorAll('.cody .cody__container');
+const slides = document.querySelectorAll('.cody-slide .wrapper');
 let currentSlideIndex = 0;
 let timer = null;
 
@@ -88,4 +88,25 @@ startSlideShow();
 
 window.addEventListener('scroll', function(){
   console.log(this.window.scrollY)
+})
+
+
+
+//  뱃지 스크롤 이벤트
+
+const getScrollBtn = document.querySelector('.scroll-btn')
+
+
+
+
+// window.addEventListener('scroll', function(){
+//   console.log(this.window.scrollY)
+// })
+
+window.addEventListener('scroll', function(){
+  if(scrollY > 280) {
+    getScrollBtn.style.display = 'block'
+  }else{
+    getScrollBtn.style.display = 'none';
+  }
 })

@@ -74,6 +74,7 @@ a{
 h1 {
     font-size: 12px;
 }
+
 /* HEADER */
 header {
     width: 100%;
@@ -83,17 +84,18 @@ header {
 
 header .top-board {
     background-color: rgb(212, 207, 207);
-    display: flex;
-    justify-content: space-between;    
-}
-
-header .top-board  a {
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
 }
+    
+header .top-board  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
 
 @keyframes scroll-left {
     0% {
@@ -110,7 +112,8 @@ header .second-board {
 
 header .second-board .logo-box {
     width: 100%;
-    height: 150px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -128,7 +131,8 @@ header .second-board .logo-box.scroll img{
 }
     
 header .second-board > .logo-box > a > img {
-    width: 500px;
+    width: 400px;
+    transition: all 0.2s ease-in;
 }
 
 header .second-board .left_menu > .material-icons {
@@ -146,31 +150,12 @@ header .second-board .right_menu a {
     text-decoration: none;
 }
 
-/* OVERVIEW LINE */
- header .overview {
-    display: none;
-}
-
-header .overview .container_items {
-    display: flex;
-}
-
-header .overview.block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 480px;
-    background-color: beige;
-}
-
 /* MAIN */
 
 main {
     width: 100%;
     position: absolute;
     top: 185px;
-    /* overflow: hidden; */
 }
 
 /* SECTION */
@@ -191,23 +176,25 @@ section .slide-wrapper img {
 
 /* BANNER */
 .banner {
+    background-color: #fff;
+    min-width: 1200px;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .banner.scroll{
     position: fixed;
-    top: 83px;
+    top: 63px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
 }
 
 .banner a{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     margin-right: 20px;
     color: #333;
@@ -218,41 +205,59 @@ section .slide-wrapper img {
 .cody-wrapper {
     width: 300vw;
     display: flex;
+    position: relative;
 }
 
-.cody-wrapper .cody .cody-slide .slide-wrapper {
+.cody-wrapper .prev,
+.cody-wrapper .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.cody-wrapper .prev{
+    position: absolute;
+    left: 3%;
+}
+
+.cody-wrapper .next{
+    left: 28.5%;
+}
+
+.cody-wrapper .prev span.material-icons,
+.cody-wrapper .next span.material-icons  {
+    font-size: 80px;
+}
+
+.cody-slide{
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cody-wrapper .cody .cody-slide .prev .material-icons,
-.cody-wrapper .cody .cody-slide .next .material-icons {
-    font-size: 100px;
-    color: gray;
-    cursor: pointer;   
-}
-.cody-wrapper .cody .cody-slide .prev,
-.cody-wrapper .cody .cody-slide .next{
-    z-index: 9;
-}
 
-.cody-wrapper .cody .cody-slide .next{
-    margin-right: 60px;
-}
 
-.cody .cody__container {
+.cody-slide > .wrapper{ 
+    width: 70%;
+    transition: all 1s ease;
+} 
+
+.wrapper {
     display: flex;
-    transition: all 0.8s ease;
-    overflow: hidden;
+    justify-content: center;
 }
-.cody .cody__container a {
-    margin-right: 60px;
+
+.wrapper a:not(:last-child) {
+    margin-right: 75px;
 }
-.cody .cody__container img {
+
+.wrapper img {
     width: 100%;
 }
+
+
 
 /* WEEKLY BEST */
 .weekly {
@@ -467,3 +472,30 @@ section .slide-wrapper img {
     width: 90%;
 }  
 
+/* BADGES */
+.badge {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    bottom: 20px;
+    right: 0;
+}
+
+.badge .up-scroll,
+.badge .down-scroll{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 7px;
+}
+
+.badge .up-scroll .material-icons,
+.badge .down-scroll .material-icons {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.badge a img{
+    width: 100%;
+}
+    
