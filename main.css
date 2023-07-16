@@ -1,15 +1,4 @@
 
-body {
-    margin: 0;
-    font-size: 12px;
-    font-family: sans-serif;
-    box-sizing: border-box;
-}
-
-li {
-    list-style: none;
-}
-
 .beige {
     background-color: beige;
 }
@@ -65,14 +54,6 @@ li {
     background-color: purple;
 }
 
-a{
-    text-decoration: none;
-    color: black;      
-}
-
-h1 {
-    font-size: 12px;
-}
 
 /* HEADER */
 header {
@@ -126,7 +107,7 @@ header .second-board .logo-box.scroll img{
     
 header .second-board > .logo-box > a > img {
     width: 400px;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 header .second-board .left_menu > .material-icons {
@@ -217,14 +198,13 @@ section .slide-wrapper img {
 .cody-slide {
     width: 80%;
     display: flex;
-    transition: all 0.8s ease-in;
+    transition: all 0.5s ease-in;
 }
 
 .cody-items .prev,
 .cody-items .next {
     cursor: pointer;
     color: #888888;
-    z-index: 10;
 }
 
 
@@ -459,36 +439,20 @@ section .slide-wrapper img {
 }  
 
 /* BADGES */
-.badge {
-    position: fixed;
-    padding-top: 75px;
-    width: 180px;
-    bottom: 0;
-    right: 0;
-}
 
 .scroll-btn {
-  width: 40px;
-  position: absolute;
-  top: 0;
-  right: 25px;
-  text-align: center;
-  opacity: 0;
-  height: 0;
-  transition: all 0.5s ease-in;
+    position: fixed;
+    right: 15px;
+    bottom: 150px;
+    cursor: pointer;
+    display: none;
 }
 .scroll-btn.block {
-    opacity: 1;
-    height: auto;
+    display: block;
 }
 
-
-.badge .up-scroll .material-icons,
-.badge .down-scroll .material-icons {
+.up-scroll .material-icons,
+.down-scroll .material-icons {
     font-size: 30px;
     cursor: pointer;
-}
-
-.qna-btn img {
-    width: 100%;
 }
