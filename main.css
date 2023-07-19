@@ -1,4 +1,9 @@
 
+body{
+    line-height: 0.8;
+    font-family: sans-serif;
+}
+
 .beige {
     background-color: beige;
 }
@@ -75,8 +80,6 @@ header .top-board  a {
     margin-left: 20px;
 }
 
-
-
 @keyframes scroll-left {
     0% {
         transform: translateX(100%);
@@ -85,6 +88,7 @@ header .top-board  a {
         transform: translateX(-100%);
       }
 } 
+
 header .second-board{
     background-color: #fff;
 }
@@ -123,6 +127,47 @@ header .second-board .right_menu {
 header .second-board .right_menu a {
     color: black;
     text-decoration: none;
+}
+
+
+/* TOGGLE BUTTON */
+header .toggle-box {
+    height: 400px;
+    background-color: #fff;
+    display: none;
+}
+
+header .toggle-box h1 {
+    width: fit-content;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header .toggle-box p {
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.first-content, .second-content, .third-content {
+    padding-top: 50px;
+    /* padding-left: 20px; */
+    min-width: 300px;
+    
+}
+
+.first-content .shop{
+    margin-left: 40px;
+}
+
+.second-content > .membership , .bank-info {
+    margin-top: 50px;
+}
+
+header .toggle-box .toggle-slide{
+    width: 38%;
+    border: 2px solid seashell;
 }
 
 /* MAIN */
@@ -274,27 +319,35 @@ section .slide-wrapper img {
     width: 100px;    
 }
 
+
+/* 한 눈에 볼 수 있는 베스트 상품 */
+
 .intultive {
     width: 100%;
-    height: 400px;
+    border: 2px dashed orange;
 }
-    
-.intultive .title {
-    width: 245px; 
+   
+.intultive .category {
+    width: 450px;    
     margin: 0 auto;
-    margin-top: 200px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: aqua;
+}
+.intultive .item-contents {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: biege;
 }
 
-.intultive .title h1{
+.category h1{
     font-size: 20px;
     font-weight: 700;
 }
 
-.intultive .intultive-btn {
-    width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+.intultive .intultive-btn {  
+    display: flex;   
 }
 
 .intultive .intultive-btn > button {
@@ -305,6 +358,9 @@ section .slide-wrapper img {
     cursor: pointer;
     color: gray;
     font-weight: 300;
+}
+
+.intultive .intultive-btn > button:not(:last-child){
     margin-right: 20px;
 }
 
@@ -313,26 +369,10 @@ section .slide-wrapper img {
     color: #333;
 }
 
-.intultive .intultive-items {
-    width: 1000px;    
-    margin: 0 auto;
-    margin-top: 30px;
-    display: flex;
-    overflow: hidden;
-}
 
-.intultive .intultive-items .item-list{
-    display: flex;
+.item-slide a img{
+    display: none;
 }
-
-.intultive .intultive-items .item-list a {
-    margin-right: 51px;
-}
-
-.intultive .intultive-items .item-list a img{
-    width: 200px; 
-}
-
 /* ITEM CONTENTS */
 .item__contents {
     width: 100%;

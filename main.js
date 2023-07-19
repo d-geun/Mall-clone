@@ -1,4 +1,4 @@
-const promotionEl = document.querySelector('.overview');
+const promotionEl = document.querySelector('.toggle-box');
 const promotionToggleBtn = document.querySelector('.left_menu');
 
 let isPromotionVisible = false;
@@ -6,9 +6,9 @@ let isPromotionVisible = false;
 promotionToggleBtn.addEventListener('click', function() {
     isPromotionVisible = !isPromotionVisible;
     if (isPromotionVisible) {
-        promotionEl.classList.add('block')
+        promotionEl.style.display = 'flex';
     } else {
-        promotionEl.classList.remove('block')
+        promotionEl.style.display = 'none';
     }
 });
 
@@ -86,8 +86,5 @@ showSlide(currentSlideIndex);
 startSlideShow();
 
 
-window.addEventListener('scroll', function(){
-  console.log(this.window.scrollY)
-})
 
 
